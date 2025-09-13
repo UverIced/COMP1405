@@ -6,30 +6,30 @@ import portfolio_game_base_module_for_101388288 as lib
 def main():
     # Title screen implementation
     lib.open_window("The Money Game")
-    lib.fill_window(29, 43, 83)  # Dark blue/purple background
+    lib.fill_window(29, 43, 83)  # Storm color background
     
     # Display game title
     lib.draw_text("The Money Game", 180, (84, 16, 18))  # Heath color
     
     # Create border around title text
     # Red rectangle background
-    lib.draw_rect((200, 150, 240, 60), (255, 0, 0))
+    lib.draw_rect((200, 150, 240, 60), (255, 0, 0), 1)
     
     # White double-line border
     # Inner border
-    lib.draw_line(195, 145, 445, 145)  # Top
-    lib.draw_line(195, 145, 195, 215)  # Left
-    lib.draw_line(445, 145, 445, 215)  # Right
-    lib.draw_line(195, 215, 445, 215)  # Bottom
+    lib.draw_line((195, 145), (445, 145), (255, 255, 255), 1)  # Top
+    lib.draw_line((195, 145), (195, 215), (255, 255, 255), 1)  # Left
+    lib.draw_line((445, 145), (445, 215), (255, 255, 255), 1)  # Right
+    lib.draw_line((195, 215), (445, 215), (255, 255, 255), 1)  # Bottom
     
     # Outer border
-    lib.draw_line(190, 140, 450, 140)  # Top
-    lib.draw_line(190, 140, 190, 220)  # Left
-    lib.draw_line(450, 140, 450, 220)  # Right
-    lib.draw_line(190, 220, 450, 220)  # Bottom
+    lib.draw_line((190, 140), (450, 140), (255, 255, 255), 1)  # Top
+    lib.draw_line((190, 140), (190, 220), (255, 255, 255), 1)  # Left
+    lib.draw_line((450, 140), (450, 220), (255, 255, 255), 1)  # Right
+    lib.draw_line((190, 220), (450, 220), (255, 255, 255), 1)  # Bottom
     
     # Keep window open for 5 seconds or until key press
-    lib.hold_window(5000)
+    lib.hold_window(500)  # 500 hundredths of a second = 5 seconds
     
     # Print game introduction
     print("Welcome to Portfolio Quest!")
